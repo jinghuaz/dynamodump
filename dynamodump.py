@@ -1026,7 +1026,7 @@ def main():
             logging.info("Restore of table(s) " + args.srcTable + " to " +
                          dest_table + " completed!")
         else:
-            delete_table(conn, sleep_interval, dest_table)
+            # delete_table(conn, sleep_interval, dest_table)
             do_restore(conn, sleep_interval, args.srcTable, dest_table, args.writeCapacity)
     elif args.mode == "empty":
         if args.srcTable.find("*") != -1:
